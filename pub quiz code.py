@@ -51,6 +51,11 @@ def main():
      while run == True:
           print ()
           text = input('Input a question with a Proper pronoun, queston word and question detail')
+          length = len(text)
+          print(length)
+          if text.endswith('?'):
+               text = text[0:-1]
+          print(text)
 
           t = text.lower()
           t_w = t.split(' ')
