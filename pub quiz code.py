@@ -41,17 +41,8 @@ def searchWiki(t_w):
 
      source = requests.get(url).text
      soup = BeautifulSoup(source, 'lxml')
-     
-     styleCorrect = soup.find_all("b")
-     found = True
-     for i in styleCorrect:
-          if "does not have an article" in str(i):
-               found = False
-
-     if found == True:   
-          print(getSummary(soup))
-     else:
-          print('Sorry, I cant find the article you are looking for')
+   
+     print(getSummary(soup))
 
 def main():
 
